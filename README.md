@@ -25,3 +25,5 @@
   |순서 | 실습 주제(Canvas 모듈명) | 수정 파일 URL
   |-----|-------|---------| 
   |1 | Linux 실습 지시문 (225, 235, 237) | http://file.mzcrestart.com/lab/linux-lab.txt |
+
+- 기타 문의 사항은 javaexpert@nate.com에 메일 주세요.
