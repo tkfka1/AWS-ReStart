@@ -25,5 +25,9 @@
   |순서 | 실습 주제(Canvas 모듈명) | 수정 파일 URL
   |-----|-------|---------| 
   |1 | Linux 실습 지시문 (225, 235, 237) | http://file.mzcrestart.com/lab/linux-lab.txt |
+  |2 | 262-[NF]-실습 : 고정 및 동적 주소 | http://file.mzcrestart.com/lab/262.pdf |
+  |3 | 263-[NF]-실습 : Amazon VPC에서 서브넷 생성 및 IP 주소 할당 | http://file.mzcrestart.com/lab/263.pdf |
+  |4 | 264-[NF]-실습 : VPC에서 네트워킹 리소스 생성 | http://file.mzcrestart.com/lab/264.pdf |
+  |5 | 267-[NF]-실습 : VPC 구축 및 웹 서버 시작 | http://file.mzcrestart.com/lab/267.pdf |
 
 - 기타 문의 사항은 javaexpert@nate.com에 메일 주세요.
