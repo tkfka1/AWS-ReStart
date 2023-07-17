@@ -32,5 +32,8 @@
   |6 | 276-[SF]-실습 : 네트워크 강화 | http://file.mzcrestart.com/lab/276.html |
   |7 | 277-[SF]-실습 : 시스템 강화 | http://file.mzcrestart.com/lab/277.html |
   |8 | 279-[SF]-실습 : AWS IAM 소개 | http://file.mzcrestart.com/lab/279.html |
+  |9 | 160-[DF]-실습 : DB 서버 구축 | http://file.mzcrestart.com/lab/160.html |
+  |10 | 274-[DF]-실습 : Amazon Aurora 소개 | http://file.mzcrestart.com/lab/274.html |
+  |11 | 275-[DF]-실습 : Amazon DynamoDB 소개 | http://file.mzcrestart.com/lab/275.html |
 
 - 기타 문의 사항은 javaexpert@nate.com에 메일 주세요.
