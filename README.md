@@ -35,5 +35,8 @@
   |9 | 160-[DF]-실습 : DB 서버 구축 | http://file.mzcrestart.com/lab/160.html |
   |10 | 274-[DF]-실습 : Amazon Aurora 소개 | http://file.mzcrestart.com/lab/274.html |
   |11 | 275-[DF]-실습 : Amazon DynamoDB 소개 | http://file.mzcrestart.com/lab/275.html |
+  |12 | 168-[JAWS]-활동 : AWS CLI 설치 및 구성 | http://file.mzcrestart.com/lab/activity1.html |
+  |13 | 169-[JAWS]-실습 : AWS System Manager 사용 | http://file.mzcrestart.com/lab/169.html |
+  |14 | 카페 활동 개요: S3에 웹사이트 생성 | http://file.mzcrestart.com/lab/activity2.html |
 
 - 기타 문의 사항은 javaexpert@nate.com에 메일 주세요.
