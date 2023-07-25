@@ -38,5 +38,10 @@
   |12 | 168-[JAWS]-활동 : AWS CLI 설치 및 구성 | http://file.mzcrestart.com/lab/activity1.html |
   |13 | 169-[JAWS]-실습 : AWS System Manager 사용 | http://file.mzcrestart.com/lab/169.html |
   |14 | 카페 활동 개요: S3에 웹사이트 생성 | http://file.mzcrestart.com/lab/activity2.html |
+  |15 | 171-[JAWS]-실습 : Amazon EC2 인스턴스 생성 | http://file.mzcrestart.com/lab/171.html |
+  |16 | 173-[JAWS]-활동 - 인스턴스 생성 문제 해결 | http://file.mzcrestart.com/lab/activity3.html |
+  |17 | 174-[JAWS]-실습 : 아키텍처 크기 조정 및 로드 밸런스 | http://file.mzcrestart.com/lab/174.html |
+  |18 | 175-[JAWS]-실습 : AWS에서 Auto Scaling 사용(Linux) | http://file.mzcrestart.com/lab/175.html |
+  
 
 - 기타 문의 사항은 javaexpert@nate.com에 메일 주세요.
