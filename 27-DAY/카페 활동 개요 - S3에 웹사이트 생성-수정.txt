@@ -1,0 +1,61 @@
+과제 3: AWS CLI를 사용하여 S3 버킷 생성
+$ aws s3api create-bucket --bucket henry-20230725 --region us-west-2 --create-bucket-configuration LocationConstraint=us-west-2 
+{
+    "Location": "http://henry-20230725.s3.amazonaws.com/"
+}
+
+과제 4: Amazon S3에 대한 전체 액세스 권한을 가진 IAM 사용자 생성
+$ aws iam create-user --user-name awsS3user
+{
+    "User": {
+        "UserName": "awsS3user", 
+        "Path": "/", 
+        "CreateDate": "2023-07-25T13:28:09Z", 
+        "UserId": "AIDAT2LHEHCHCSTOTAVPH", 
+        "Arn": "arn:aws:iam::262746159246:user/awsS3user"
+    }
+}
+
+$ aws iam create-login-profile --user-name awsS3user --password Training123!
+{
+    "LoginProfile": {
+        "UserName": "awsS3user", 
+        "CreateDate": "2023-07-25T13:28:41Z", 
+        "PasswordResetRequired": false
+    }
+}
+
+$ aws iam list-policies --query "Policies[?contains(PolicyName,'S3')]"
+$ aws iam attach-user-policy --policy-arn arn:aws:iam::aws:policy/AmazonS3FullAccess --user-name awsS3user
+
+http://file.mzcrestart.com/lab-im: AWS CLI를 사용해 Amazon S3로 파일 업로드
+$ aws s3 website s3://henry-20230725/ --index-document index.html
+
+객체 소유권 변경
+	-AWS Management Console로 가서 생성한 Bucket의 [권한] 탭을 클릭하여 이동
+	-[객체 소유권] 섹션 > [편집] 클릭
+	-[객체 소유권 편집] 페이지에서, [객체 소유권]을 [ACL 활성화됨]으로 변경
+	-[ACL이 복원된다는 것을 확인합니다.] 체크 박스 체크할 것 
+	-[변경 사항 저장] 클릭 
+	
+퍼블릭 액세스 차단(버킷 설정) > 편집
+	-모든 퍼블릭 액세스 차단 체크 해제
+	-4개의 체크박스 중 아래 2개만 체크 
+	-[변경 사항 저장] 클릭 
+	
+ACL(액세스 제어 목록) > 편집
+	-모든 사람(퍼블릭 액세스) > 읽기 체크 
+	-이러한 변경 사항이 객체와 버킷에 미치는 영향을 이해합니다. > 체크 
+	-[변경 사항 저장] 클릭 
+	
+$ aws s3 cp /home/ec2-user/sysops-activity-files/static-website/ s3://henry-20230725/ --recursive --acl public-read
+upload: css/styles.css to s3://henry-20230725/css/styles.css      
+upload: ./index.html to s3://henry-20230725/index.html           
+upload: images/Coffee-Shop.png to s3://henry-20230725/images/Coffee-Shop.png
+upload: images/Cookies.png to s3://henry-20230725/images/Cookies.png
+upload: images/Cake-Vitrine.png to s3://henry-20230725/images/Cake-Vitrine.png
+upload: images/Cup-of-Hot-Chocolate.png to s3://henry-20230725/images/Cup-of-Hot-Chocolate.png
+upload: images/Coffee-and-Pastries.png to s3://henry-20230725/images/Coffee-and-Pastries.png
+upload: images/Strawberry-&-Blueberry-Tarts.png to s3://henry-20230725/images/Strawberry-&-Blueberry-Tarts.png
+upload: images/Strawberry-Tarts.png to s3://henry-20230725/images/Strawberry-Tarts.png
+upload: images/Cafe-Owners.png to s3://henry-20230725/images/Cafe-Owners.png
