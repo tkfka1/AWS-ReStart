@@ -42,6 +42,8 @@
   |16 | 173-[JAWS]-활동 : 인스턴스 생성 문제 해결 | http://file.mzcrestart.com/lab/activity3.html |
   |17 | 174-[JAWS]-실습 : 아키텍처 크기 조정 및 로드 밸런스 | http://file.mzcrestart.com/lab/174.html |
   |18 | 175-[JAWS]-실습 : AWS에서 Auto Scaling 사용(Linux) | http://file.mzcrestart.com/lab/175.html |
+  |19 | 179-[JAWS]-실습 : Amazon RDS로 마이그레이션 | http://file.mzcrestart.com/lab/activity6.html |
+  |20 | 180-[JAWS]-실습 : Amazon VPC 구성 | http://file.mzcrestart.com/lab/180.html |
   
 
 - 기타 문의 사항은 javaexpert@nate.com에 메일 주세요.
