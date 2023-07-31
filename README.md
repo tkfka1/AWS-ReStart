@@ -44,6 +44,11 @@
   |18 | 175-[JAWS]-실습 : AWS에서 Auto Scaling 사용(Linux) | http://file.mzcrestart.com/lab/175.html |
   |19 | 179-[JAWS]-실습 : Amazon RDS로 마이그레이션 | http://file.mzcrestart.com/lab/activity6.html |
   |20 | 180-[JAWS]-실습 : Amazon VPC 구성 | http://file.mzcrestart.com/lab/180.html |
+  |21 | 183-[JAWS]-실습 : 스토리지 관리 | http://file.mzcrestart.com/lab/183.html |
+  |22 | 185-[JAWS]-활동 : Amazon S3 작업 | http://file.mzcrestart.com/lab/activity8.html |
+  |23 | 186-[JAWS]-실습 : 인프라 모니터링 | http://file.mzcrestart.com/lab/186.html |
+  |24 | 187-[JAWS]-활동 : AWS CloudTrail 작업 | http://file.mzcrestart.com/lab/activity9.html |
+  |25 | 189-[JAWS]-활동 : 사용률 최적화 | http://file.mzcrestart.com/lab/activity10.html |
   
 
 - 기타 문의 사항은 javaexpert@nate.com에 메일 주세요.
