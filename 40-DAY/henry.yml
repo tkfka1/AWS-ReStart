@@ -1,0 +1,98 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: AWS re/Start Challenge Lab-192 on 2023-08-15 by Henry
+
+Parameters:
+  VpcCIDR:
+    Type: String
+    Default: 10.0.0.0/16
+
+  SubnetCIDR:
+    Type: String
+    Default: 10.0.10.0/24
+
+Resources:
+###########
+# VPC with Internet Gateway
+###########
+  MyVPC:
+    Type: AWS::EC2::VPC
+    Properties:
+      CidrBlock: !Ref VpcCIDR
+      EnableDnsSupport: true
+      EnableDnsHostnames: true
+      Tags:
+        - Key: Name
+          Value: lab-vpc
+
+  MyIGW:
+    Type: AWS::EC2::InternetGateway
+    Properties:
+      Tags:
+        - Key: Name
+          Value: lab-igw
+          
+  MyVPCtoIGW:
+    Type: AWS::EC2::VPCGatewayAttachment
+    DependsOn:
+      - MyIGW
+      - MyVPC
+    Properties:
+      InternetGatewayId: !Ref MyIGW
+      VpcId: !Ref MyVPC
+      
+###########
+# Private Subnet
+###########
+  MyPrivateSubnet:
+    Type: AWS::EC2::Subnet
+    Properties:
+      VpcId: !Ref MyVPC
+      CidrBlock: !Ref SubnetCIDR
+      AvailabilityZone: ap-northeast-2a
+      Tags:
+        - Key: Name
+          Value: lab-Private-Subnet      
+      
+###########
+# SSH Security Group
+###########
+  MySecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: SSH access from anywhere
+      VpcId: !Ref MyVPC
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: 22
+          ToPort: 22
+          CidrIp: 0.0.0.0/0
+      Tags:
+        - Key: Name
+          Value: lab-sg
+        
+###########
+# Instance
+###########
+
+  MyEC2Instance:
+    Type: AWS::EC2::Instance
+    Properties:
+      InstanceType: t3.micro
+      ImageId: ami-055179a7fc9fb032d
+      SubnetId: !Ref MyPrivateSubnet
+      SecurityGroupIds:
+        - !Ref MySecurityGroup
+      Tags:
+        - Key: Name
+          Value: lab-ec2 
+          
+###########
+# Outputs
+###########
+Outputs:
+  MyVPCId:
+    Description: VPC ID
+    Value: !Ref MyVPC
+  MyEC2InstanceId:
+    Description: EC2 Instance ID
+    Value: !Ref MyEC2Instance
